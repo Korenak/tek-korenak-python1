@@ -1,6 +1,8 @@
 from operator import add
 '''
-A function is a block of code that you can name and that performs a certain task. You can run the block many times by using the function name. The definition of a function specifies its name and the data the function needs to work. Parameters are the variables in the function that hold this data.
+A function is a block of code that you can name and that performs a certain task. You can run the block many times by
+ using the function name. The definition of a function specifies its name and the data the function needs to work. 
+ Parameters are the variables in the function that hold this data.
 '''
 
 # Zero args function
@@ -68,10 +70,37 @@ for i in range(1, 5):
 print("------------ End of Function Initialization ---------------------\n\n")
 
 #TODO: Write a function that returns true if the input string is a palindrome string.
-# Inpute type: String
+# Input type: String
 # Return type: Boolean 
+print("------------ TODO palindrome identifier ---------------------\n")
+# version 1. It works, but it can false negative on Capital letters in the string.
+# def palinfind(x):
+#     return x == x[::-1]
+# I corrected for Upper case letters with .lower(), but found out spaces are a problem in version 2.
+ #def palinfind(x):
+ #   return x.lower() == x.lower()[::-1]
+
+#version 3 improves on version 1, by stripping spaces and passing everything as lowercase.
 
 
+def palinfind(x):
+    # added a print line for my own sanity, as pycharm is not as interactive as jupyter and does not auto print returns
+    print(''.join(x.split()).lower() == ''.join(x.split()).lower()[::-1])
+    return ''.join(x.split()).lower() == ''.join(x.split()).lower()[::-1]
+# punctuation is still a potential issue, but I do not know how to solve that with my current knowledge
+# plus I have already spent way too much time on this section.
+
+# shows basic True read
+palinfind("kayak")
+
+# showsFalse read
+palinfind("totallynotapalindrome")
+
+# shows fixed case error
+palinfind("rEdDeR")
+
+#shows fixed blank space
+palinfind("Never Odd Or Even")
 '''
 Boolean values can represent the state of a program or a certain condition. For example, you can use variables such as game_active, can_edit, and polling_open, which take either a True or False value. When these values are True, certain code sections are enabled as the program runs.
 '''
@@ -82,4 +111,3 @@ Boolean values can represent the state of a program or a certain condition. For 
 # sample input2: Jose
 
 # sample output2: false
-
