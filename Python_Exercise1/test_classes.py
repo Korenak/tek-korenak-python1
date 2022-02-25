@@ -17,41 +17,48 @@ print(ar.divide())
 print(ar.remainder())
 ar.print_self()
 
-#TODO: create several more instance of the Arithmetic class and add different values
+# TODO: create several more instance of the Arithmetic class and add different values
+
 
 # redefined Arithmetic and added more objects so I would have more to work with than the provided 2 it started with...
 class Arithmetic:
 
-    def __init__(s, n1 = 1, n2 = 2, n3 = 3, n4 = 4, n5 = 5, n6 = 6, n7 = 7, n8 = 8, n9 = 9, n10 = 10):
-        s.n1 = n1
-        s.n2 = n2
-        s.n3 = n3
-        s.n4 = n4
-        s.n5 = n5
-        s.n6 = n6
-        s.n7 = n7
-        s.n8 = n8
-        s.n9 = n9
-        s.n10 = n10
-#subtracts one from value input
-    def oopslostone(s, x):
-        return x - s.n1
-# makes use of s.n2 which = 2 to square whatever the value entered into the function is
-    def squared(s, x):
-        return x**s.n2
+    def __init__(self, n1=1, n2=2, n3=3, n4=4, n5=5, n6=6, n7=7, n8=8, n9=9, n10=10):
+        self.n1 = n1
+        self.n2 = n2
+        self.n3 = n3
+        self.n4 = n4
+        self.n5 = n5
+        self.n6 = n6
+        self.n7 = n7
+        self.n8 = n8
+        self.n9 = n9
+        self.n10 = n10
+# subtracts one from value input
+
+    def oopslostone(self, x):
+        return x - self.n1
+
+# makes use of self.n2 which = 2 to square whatever the value entered into the function is
+    def squared(self, x):
+        return x**self.n2
+
 # similar to last but cubed values
-    def cubed(s, x):
-        return x**s.n3
+    def cubed(self, x):
+        return x**self.n3
+
 # chaos addition subtraction multiplication division and remainder calc calling on multiple class objects
-    def chaos(s):
-        return s.n1*s.n5-s.n10+s.n7/s.n2 % s.n4
+    def chaos(self):
+        return self.n1*self.n5-self.n10+self.n7/self.n2 % self.n4
+
 # subtracts n2*2 from n4 the joke is it = 0... 0 ideas left
-    def ideasleft(s):
-        return s.n4-s.n2*2
+    def ideasleft(self):
+        return self.n4-self.n2*2
+
 
 ar = Arithmetic()
 print(ar.oopslostone(10))
 print(ar.squared(5))
 print(ar.cubed(9))
 print(ar.chaos())
-print(str(ar.ideasleft())+ " ideas left")
+print(str(ar.ideasleft()) + " ideas left")

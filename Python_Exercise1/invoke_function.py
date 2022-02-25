@@ -17,7 +17,7 @@ introduction("Harry", "Houdini")
 print("Invoking function with default arguments")
 introduction_with_default_args()
 
-#TODO: In this file, go ahead and invoke the rest of the functions from the initialize_functions.py file
+# TODO: In this file, go ahead and invoke the rest of the functions from the initialize_functions.py file
 
 # Had to add a print line to some functions on initialize_functions.py to get them to display when run in pycharm
 
@@ -34,8 +34,7 @@ product_of_two_num(31, 5)
 add_all_nums(1, 3, 6, 7, 34, 78)
 
 double(20)
-#fib ommitted from print due to recursion
+# fib ommitted from print due to recursion
 fib(42)
 
 subtract(50, 39)
-

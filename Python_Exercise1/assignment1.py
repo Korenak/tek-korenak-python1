@@ -1,4 +1,5 @@
-# Comments are lines in a program that the program ignores when it executes. They allow you to add notes about how the program works to help you and other developers understand the code.
+# Comments are lines in a program that the program ignores when it executes. They allow you to add notes about how the
+# program works to help you and other developers understand the code.
 
 # This is a single line comment in Python
 
@@ -19,8 +20,8 @@ Use comments to explain:
 '''
 
 # Print to console
-from array import array
-from operator import le
+# from array import array
+# from operator import le
 
 
 print("This is my first print statement")
@@ -67,7 +68,7 @@ print("Hi, my name is " + " ".join([first_name, last_name]))
 # using format() to concatenate
 print("Hi, my name is {} {}".format(first_name, last_name))
 '''
-#TODO: Try introducing yourself and add your age as well. On top of first_name & last_name variable add another
+# TODO: Try introducing yourself and add your age as well. On top of first_name & last_name variable add another
 # variable called my_age and set it to a number.
 # Then try concatenating it using the above four strategies.
 
@@ -76,7 +77,8 @@ print("Hello, my name is " + first_name + " " + last_name + ", " + "and I am " +
       + "Hello, my name is %s %s and I am %s years old.\n" % (first_name, last_name, str(my_age))
       + "Hola, me llamo " + " ".join([first_name, last_name]) + " Tengo " + str(my_age) + " Años.\n"
       + "Ahoy mateys, me name be {} {} n' I be {} years ole by the reckonin' of the sea.\n".format(first_name,
-                                                                                                 last_name, str(my_age))
+                                                                                                   last_name,
+                                                                                                   str(my_age))
       )  # put them all in one print for fun. my_age must be called as a str since you can not concat it as an int.
 
 '''
@@ -93,11 +95,11 @@ Many dedicated visualization libraries are available as well, such as Matplotlib
 '''
 
 # Initialize variables of different data types
-simple_string  = "this is a simple string"
-num            = 1234
+simple_string = "this is a simple string"
+num = 1234
 simple_decimal = 12.4
 simple_boolean = True  # A Boolean value represents either T or F. In Python, these values are True and False.
-short_array    = [1, 2, 3, 4]
+short_array = [1, 2, 3, 4]
 
 '''
 You can use the elif, or else if, statement to make your program respond to multiple conditions. This code structure
@@ -107,12 +109,12 @@ An else block runs a particular block of code when all other conditions don’t 
 last block in an if-elif-else chain.
 '''
 # Branching Logic
-if(simple_decimal < 5.0):
+if simple_decimal < 5.0:
     print("Small decimal")
-elif(simple_decimal < 9.0):
+elif simple_decimal < 9.0:
     print("Mid size decimal")
 else:
-    print("Big decimal") 
+    print("Big decimal")
 
 '''
 A sequence is a data structure that stores a collection of items in a specific order. In some languages, a sequence can 
@@ -143,13 +145,13 @@ A for loop repeats as many times as you specify or once for each item in a seque
 '''
 # for loops print odd numbers from 1 to 10;
 for num in range(10):
-    if(num % 2 == 1):
+    if num % 2 == 1:
         print(num)
 
 # or ...
 
 for num in range(10):
-    if(num % 2 != 0):
+    if num % 2 != 0:
         print(num)
 
 print("----------- While Loop -------------------\n")
@@ -172,22 +174,22 @@ A nested loop is a loop inside another loop. Say you need a loop that examines e
 a loop that looks at each pixel in a row and, inside that loop, add a second loop that looks at every pixel in the
 current column for that row.
 '''
-#TODO: write a for loop to ONLY print even numbers
+# TODO: write a for loop to ONLY print even numbers
 print("----------- TODO For Loop Even -------------------\n")
 # For loop even
 for num in range(11):
     if num % 2 == 0:
         print(num)
 
-#TODO: Declare an Array with mixed data types. i.e. string, number, boolean, etc. 
+# TODO: Declare an Array with mixed data types. i.e. string, number, boolean, etc.
 # Iterate through this list using for loop and see the output. 
 print("----------- TODO Mixed Data Types Array -------------------\n")
-mixed_array = [True, 1, "texthere", 30.5 ]
+mixed_array = [True, 1, "texthere", 30.5]
 # Iterate mixed_array overly complex version
 for x in mixed_array:
     print(x)
 
-#TODO: Print the data type for each array item. 
+# TODO: Print the data type for each array item.
 print("----------- TODO Print Types overly complex solution -------------------\n")
 for x in mixed_array:
     if type(x) == int:
@@ -208,7 +210,6 @@ for x in mixed_array:
 print("----------- TODO hello to olleh -------------------\n")
 print("Hello"[::-1])
 
-
 # TODO: Reverse a number: input = 1234, output = 4321
 print("----------- TODO Reverse a number dummy edition -------------------\n")
 # you can not normally do this with an INT. Instead (str(1234)) or ("1234") would work.
@@ -228,7 +229,9 @@ With a sequence, you can do the following:
 • Look for duplicate or unique items
 • Loop through the sequence and do something with each item
 • Work with items that match certain conditions.
-In Python, the main sequence type is the list. Lists are mutable, meaning you can modify them after creating them. Tuples are immutable sequences, meaning they can’t be changed after they’re defined. Strings are a special type of sequence: each element in the sequence is a character.
+In Python, the main sequence type is the list. Lists are mutable, meaning you can modify them after creating them. 
+Tuples are immutable sequences, meaning they can’t be changed after they’re defined. Strings are a special type of 
+sequence: each element in the sequence is a character.
 '''
 print("------- List --------------")
 my_list = ["apple", "banana", "cherry", "mango", "pineapple", "watermelon"]
@@ -255,7 +258,7 @@ my_list.remove("Cupcake")
 print(my_list)
 
 # remove an item off of a list by index #
-my_list.pop(-1) # last index removal
+my_list.pop(-1)  # last index removal
 print(my_list)
 
 # size of a list
@@ -273,7 +276,7 @@ my_list[1] = "avocado"
 for index, fruit in enumerate(my_list):
     print("index: %s =  %s " % (index, fruit))
 
-#TODO: Using a for loop update every item in the my_list list into dessert items
+# TODO: Using a for loop update every item in the my_list list into dessert items
 # dessert = ["apple cake", "banana cake", "donut", "fudge", "ice cream", "jilapi"]
 print("-------------------- TODO update list to junkfoods ---------------------------------\n")
 for x in my_list:
@@ -292,7 +295,8 @@ empty_dict = {}
 print("Empty dictionary: %s" % empty_dict)
 
 # Initialize dictionary with some key/pair values
-country_capital_dict = {"America": "Washington DC", "Bangladesh": "Dhaka", "Canada": "Ottawa", "Denmark": "Copenhagen", "Ethopia": "Addis Ababa"}
+country_capital_dict = {"America": "Washington DC", "Bangladesh": "Dhaka", "Canada": "Ottawa", "Denmark": "Copenhagen",
+                        "Ethopia": "Addis Ababa"}
 print("\nDictionary with initialized values:\n%s" % country_capital_dict)
 
 # adding items to an existing dictionary
@@ -313,7 +317,7 @@ country_capital_dict["Bangladesh"] = "Sylhet"
 print("\nDictionary after update:\n%s" % country_capital_dict)
 
 # Accessing values in a dictionary
-print("\nCapital of Canada is: %s" %country_capital_dict.get("Canada"))
+print("\nCapital of Canada is: %s" % country_capital_dict.get("Canada"))
 
 print("Capital of Denmark is: %s" % country_capital_dict["Denmark"])
 
@@ -322,12 +326,13 @@ print("\n----------------------- Iterate through a Dictionary-------------------
 for key, value in country_capital_dict.items():
     print("Country: %s, Capital City: %s" % (key, value))
 
-#TODO: Create 5 lists of real life items and create 5 dictionaries. For example, 
-# for list, I would create a list for list of chores I need to do on weekends. i.e chores = ['laundry', 'pick-up mail', 'clean the apt']
+# TODO: Create 5 lists of real life items and create 5 dictionaries. For example,
+# for list, I would create a list for list of chores I need to do on weekends. i.e chores = ['laundry', 'pick-up mail',
+# 'clean the apt']
 # for dictionary, I would have friends to phone number. friends = {'jose': '718-233-6464', 'ali': '646-232-2323'}
 print("\n----------------------- TODO 5 Lists and 5 Dicts------------------------------\n")
 # randomlists.com for items at random to make a list out of
-list1_rand_movies = ("The House","Batman","Sinkhole","Resident Evil", "Meander")
+list1_rand_movies = ("The House", "Batman", "Sinkhole", "Resident Evil", "Meander")
 list2_rand_team = ("Indianapolis Colts", "Buffalo Bills", "Atlanta Falcons", "Seattle Seahawks", "Denver Broncos")
 list3_rand_artists = ("Christina Aguilera", "Billie Eilish", "Amy Stroup", "Fenton Robinson", "Bruno Mars")
 list4_rand_adjectives = ("average", "creepy", "closed", "panicky", "paltry")
@@ -335,9 +340,10 @@ list5_rand_color = ("Dark Green", "Steel Blue", "Dark Sea Green", "Lemon Chiffon
 
 dict1_name_zip = {"Shyanne": "98144", "Julie": "37128", "Cecilia": "45520", "Lyric": "20175", "Keith": "10002"}
 dict2_f_food = {"f0": "artichokes", "f1": "date sugar", "f3": "honeydew mellon", "f4": "grouper", "f5": "pistachio"}
-dict3_babyname = {"August": "Ok name", "Alfonso": "Crap", "Marina": "Crap", "Cael": "Hell No", "Lisa": "Normal Sounding"}
+dict3_babyname = {"August": "Ok name", "Alfonso": "Crap", "Marina": "Crap", "Cael": "Hell No",
+                  "Lisa": "Normal Sounding"}
 # Yes, I understand that some states have matching city names, therefore this would not work as a key for a larger dict
-dict4_location = {"Scottsdale":"AZ", "Stockton": "CA", "Cincinnati": "OH", "Columbus": "GA", "Pittsburgh": "PA"}
+dict4_location = {"Scottsdale": "AZ", "Stockton": "CA", "Cincinnati": "OH", "Columbus": "GA", "Pittsburgh": "PA"}
 dict5_words = {"fret": 4, "rabble": 6, "credulous": 9, "Whimsical": 9, "imperative": 10}
 
 print(list1_rand_movies)
@@ -350,4 +356,3 @@ print(dict2_f_food)
 print(dict3_babyname)
 print(dict4_location)
 print(dict5_words)
-
