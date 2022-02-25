@@ -5,26 +5,33 @@ A function is a block of code that you can name and that performs a certain task
  Parameters are the variables in the function that hold this data.
 '''
 
+
 # Zero args function
 def zero_arg_function():
     print("This is a very basic function without any arguments/parameter\n")
+
 
 # functions with arguments/parameters
 def introduction(first_name, last_name):
     print("Hi, my name is %s %s. Nice to meet you!\n" % (first_name, last_name))
 
+
 # functions with default arguments/parameters
 def introduction_with_default_args(first_name = "John", last_name = "Doe"):
     print("Hi, my name is %s %s. Nice to meet you!\n" % (first_name, last_name))
+
 
 # function with a mix of default arguments
 # invoke this function with a mix of passing in zero arg, switch first name and last name arg, etc.
 def introduction_with_mix_of_default_args(first_name, last_name = "Doe"):
     print("Hi, my name is %s %s. Nice to meet you!\n" % (first_name, last_name))
 
+
 # function that returns value(s)
 def product_of_two_num(num1, num2):
+    print(num1 * num2)
     return num1 * num2
+
 
 # function with arbitrary arguments
 # User of this function will pass in N number of real numbers, which will be converted into a tuple.
@@ -34,12 +41,14 @@ def add_all_nums(*nums):
     sums = 0
     for num in nums:
         sums += num
+    print(sums)
     return sums
 
 double = lambda x: x * 2
 # Equivalant function
 def double(x):
-   return x * 2
+    print (x * 2)
+    return x * 2
 
 print("-------------------------- recursive function ---------------------")
 '''
@@ -48,7 +57,7 @@ An if statement allows you to set a condition on whether certain code runs. For 
 # Recursive function is a function that calls itself
 # TO understand this, let's compute fibonacci sequence where the sum of previous two numbers equals the current number. 
 def fib(num):
-    if(num < 2):
+    if (num < 2):
         return num
     else:
         return fib(num - 1) + fib(num - 2)
@@ -61,7 +70,8 @@ def fib(num):
 # function level scoping: the variable result in the below function is not available outside of subtract function
 def subtract(num1, num2):
     result = num1 - num2
-    return result 
+    print(result)
+    return result
 
 # Control statement level scoping: variable i in the control statement below is only available to the for loop
 for i in range(1, 5):
@@ -84,7 +94,7 @@ print("------------ TODO palindrome identifier ---------------------\n")
 
 
 def palinfind(x):
-    # added a print line for my own sanity, as pycharm is not as interactive as jupyter and does not auto print returns
+    # added a print line for my own sanity because my IDE choices
     print(''.join(x.split()).lower() == ''.join(x.split()).lower()[::-1])
     return ''.join(x.split()).lower() == ''.join(x.split()).lower()[::-1]
 # punctuation is still a potential issue, but I do not know how to solve that with my current knowledge
